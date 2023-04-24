@@ -1,5 +1,5 @@
 #!/bin/bash
-xterm -hold -e  "roslaunch my_robot world_and_robot.launch " &
+xterm -hold -e  "roslaunch my_robot world_and_robot.launch" &
 pid1=$!
 
 sleep 7

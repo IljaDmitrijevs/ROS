@@ -13,10 +13,9 @@
       <wheelDiameter>0.1</wheelDiameter>
 
       <!--Limits-->
-      <wheelAcceleration>10</wheelAcceleration>
-      <wheelTorque>100</wheelTorque>
-      <max_wheel_torque>200</max_wheel_torque>
-      <max_wheel_acceleration>10.0</max_wheel_acceleration>
+      <wheelAcceleration>0</wheelAcceleration>
+      <wheelTorque>80</wheelTorque>
+      
 
       <!--Output-->
       <robotBaseFrame>base_link</robotBaseFrame>
