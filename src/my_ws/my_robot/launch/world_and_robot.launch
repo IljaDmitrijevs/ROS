@@ -2,7 +2,7 @@
 
 <launch>
 
-  <!-- Robot pose -->
+  <!-- Robot initial pose -->
   <arg name="x" default="0"/>
   <arg name="y" default="-4"/>
   <arg name="z" default="0"/>
@@ -10,7 +10,7 @@
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="0"/>
 
-  <!--RViz config -->
+  <!-- Configured RViz config -->
   <arg name="rviz_config" default="$(find my_robot)/config/rviz_config.rviz"/>
 
   <!-- Launch robot description-->
@@ -31,11 +31,9 @@
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
         args="-urdf -param robot_description -model my_robot 
               -x $(arg x) -y $(arg y) -z $(arg z)
-              -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"
-              >      
+              -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)">      
   </node>
 
-  <!--launch rviz-->
+  <!-- Launch RViz-->
   <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(arg rviz_config)"/>
-
 </launch>

@@ -40,5 +40,4 @@
   <xacro:include filename="$(find my_robot)/urdf/robot_core.xacro" />
   <xacro:include filename="$(find my_robot)/urdf/lidar.xacro" />
   <xacro:include filename="$(find my_robot)/urdf/camera.xacro" />     
-
 </robot>

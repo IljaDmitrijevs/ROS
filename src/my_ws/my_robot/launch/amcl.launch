@@ -54,12 +54,7 @@
     <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
          <param name="base_global_planner" value="navfn/NavfnROS" />
          <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
-<!--
-            <param name="publish_traj_pc" type="bool" value="True" />
-            <param name="publish_cost_grid_pc" type="bool" value="True" />
-            <param name="publish_cost_grid" type="bool" value="True" />
-            <param name="meter_scoring" type="bool" value="True" />
-   -->
+         
         <rosparam file="$(find my_robot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find my_robot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
         <rosparam file="$(find my_robot)/config/local_costmap_params.yaml" command="load" />
